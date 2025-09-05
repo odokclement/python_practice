@@ -93,6 +93,19 @@ print(point[0])           # 10
 print(len(point))        # 2
 #point[0] = 15           # Error: tuples are immutable
 
+#Dictionaries
+person = {"name": "Alice", "age": 30}
+print(person["name"])     # "Alice"
+person["age"] = 31       # update age
+print(person)            # {'name': 'Alice', 'age': 31}
+person["city"] = "New York"  # add new key-value pair
+
+#sets
+unique_numbers = {1, 2, 3, 4, 5}
+print(unique_numbers)     # {1, 2, 3, 4, 5}
+unique_numbers.add(6)    # add 6
+print(unique_numbers)     # {1, 2, 3, 4, 5, 6}
+unique_numbers.remove(3) # remove 3
 
 
 
