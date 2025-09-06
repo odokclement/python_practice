@@ -107,6 +107,11 @@ unique_numbers.add(6)    # add 6
 print(unique_numbers)     # {1, 2, 3, 4, 5, 6}
 unique_numbers.remove(3) # remove 3
 
+#intersection
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+print(set_a & set_b)     # {3}
+
 
 
 
