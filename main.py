@@ -277,6 +277,30 @@ text = "The cat sat on the mat."
 matches = re.findall(pattern, text)
 print(matches)          # ['The', 'cat', 'sat', 'the', 'mat']
 
+#accepting command line arguments
+# to run this script with arguments, use the command line:
+# python main.py arg1 arg2 arg3
+import sys
+if len(sys.argv) > 1:
+    print("Command line arguments:")
+    for arg in sys.argv[1:]:
+        print(arg)
+else:
+    print("No command line arguments provided.")
+
+#argparse for more complex argument parsing
+import argparse
+parser = argparse.ArgumentParser(description="Process some integers.")
+parser.add_argument('integers', metavar='N', type=int, nargs='+',
+                    help='an integer for the accumulator')
+parser.add_argument('--sum', dest='accumulate', action='store_const',
+                    const=sum, default=max,
+                    help='sum the integers (default: find the max)')
+args = parser.parse_args()
+print(args.accumulate(args.integers))
+
+
+
 
 
 
