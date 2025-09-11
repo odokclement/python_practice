@@ -56,4 +56,14 @@ print(squared)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 even_squared = [x ** 2 for x in range(10) if x % 2 == 0]
 print(even_squared)  # [0, 4, 16, 36, 64]
 
+#Generators
+#generators are a simple way of creating iterators using functions and the yield statement
+def generate_squares(n):
+    for i in range(n):
+        yield i ** 2
+squares_gen = generate_squares(5)
+for square in squares_gen:
+    print(square)  # 0 1 4 9 16
+    
+
 
